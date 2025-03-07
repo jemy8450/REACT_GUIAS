@@ -28,8 +28,8 @@ var nuevoAlumno = new Alumno
     Email = "12344321@email",
     Nombre = "Ricardo JR Milos"
 };
-    var resultado = alumnoDao.insertarAlumno(nuevoAlumno);
-    Console.WriteLine(resultado);
+    //var resultado = alumnoDao.insertarAlumno(nuevoAlumno);
+    //Console.WriteLine(resultado);
 #endregion
 #region updateAlumno
 var nuevoAlumno2 = new Alumno
@@ -41,10 +41,19 @@ var nuevoAlumno2 = new Alumno
     Nombre = "Wiliams"
 };
 
-    var resultado2 = alumnoDao.update(2, nuevoAlumno2);
-    Console.WriteLine(resultado2);
+    //var resultado2 = alumnoDao.update(2, nuevoAlumno2);
+    //Console.WriteLine(resultado2);
 #endregion
 #region borrar
 var result = alumnoDao.deleteAlumno(1026);
 Console.WriteLine("Se elimino " + result);
+#endregion
+#region alumnoAsignatura desde un JOOIN
+
+var alumAsig = alumnoDao.SelectAlumAsig();
+
+foreach (AlumnoAsignatura alumAsig2 in alumAsig)
+{
+    Console.WriteLine(alumAsig2.nombreAlumno + " Asignaruta que cursa " + alumAsig2.nombreAsignatura);
+}
 #endregion
