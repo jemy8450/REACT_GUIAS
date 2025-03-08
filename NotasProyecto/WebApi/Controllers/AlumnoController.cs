@@ -43,6 +43,14 @@ namespace WebApi.Controllers
             return _dao.InsertarMatricula(alumno, idAsignatura);
         }
         #endregion
+        #region deleteAlumno
+        [HttpDelete("alumno")]
+
+        public bool eleminarAlumno(int id)
+        {
+            return _dao.eliminarAlumno(id);
+        }
+        #endregion
     }
 }
 
