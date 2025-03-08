@@ -74,6 +74,7 @@ namespace reatBackend.Repository
                 contexto.SaveChanges();
                 return true;
 
+
             }
             catch (Exception e)
             {
@@ -139,12 +140,10 @@ namespace reatBackend.Repository
                                     Direccion = a.Direccion,
                                     Edad = a.Edad,
                                     Email = a.Email,
-                                    asignatura = asig.Nombre
+                                    Asignatura = asig.Nombre
                                 };
 
             return listadoALumno.ToList();
         }
-
-
     }
 }

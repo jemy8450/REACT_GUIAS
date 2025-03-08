@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace reatBackend.Models;
 
 public partial class Alumno
 {
     public int Id { get; set; }
-
+    [Required]
     public string Dni { get; set; } = null!;
 
     public string Nombre { get; set; } = null!;

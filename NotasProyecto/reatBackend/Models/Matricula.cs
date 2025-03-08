@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace reatBackend.Models;
 
 public partial class Matricula
 {
     public int Id { get; set; }
-
+    
     public int AlumnoId { get; set; }
 
     public int AsignaturaId { get; set; }
